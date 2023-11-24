@@ -1,11 +1,11 @@
 import 'package:hive/hive.dart';
-part 'note_model.g.dart'; //لازم الاسم يمون زي اسم الفايل بالظبط
-//generate file type adapter
+part 'note_model.g.dart'; //لازم الاسم يكون زي اسم الفايل بالظبط
+//generate file typeadapter to deal with obj
 //flutter packages pub run build_runner build
 
 @HiveType(typeId: 0) //each obj must have uniqe id 0:255
 class NoteModel extends HiveObject {
-  @HiveField(0) //uniqe per class
+  @HiveField(0) //uniqe for each class
   final String title;
   @HiveField(1)
   late final String subTitle;

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../constants.dart';
-
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {super.key, required this.hint, this.maxLines = 1, this.onSaved});
@@ -19,12 +17,13 @@ class CustomTextField extends StatelessWidget {
           // ?? null check operator بيشوف اللي قبلخ ب null ولا لا
           return 'Field is required';
         }
+        return null;
       },
       cursorColor: KPrimaryColor,
       maxLines: maxLines,
       decoration: InputDecoration(
           hintText: hint,
-          hintStyle: TextStyle(color: KPrimaryColor),
+          hintStyle:const TextStyle(color: KPrimaryColor),
           border: buildBorder(),
           enabledBorder: buildBorder(),
           focusedBorder: buildBorder(KPrimaryColor)),

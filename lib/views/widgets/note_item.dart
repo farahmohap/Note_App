@@ -3,18 +3,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:noteapp/views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  const 
+  NoteItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (() {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return EditNoteView();
+          return const EditNoteView();
         }));
       }),
       child: Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 24,
           bottom: 24,
           left: 16,
@@ -23,7 +24,7 @@ class NoteItem extends StatelessWidget {
             color: Colors.amber, borderRadius: BorderRadius.circular(16)),
         child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
           ListTile(
-            title: Text(
+            title: const Text(
               "Flutter Tips",
               style: TextStyle(color: Colors.black, fontSize: 26),
             ),
@@ -35,7 +36,8 @@ class NoteItem extends StatelessWidget {
             ),
             trailing: IconButton(
               onPressed: (() {}),
-              icon: Icon(FontAwesomeIcons.trash, size: 24, color: Colors.black),
+              icon: const Icon(FontAwesomeIcons.trash,
+                  size: 24, color: Colors.black),
             ),
           ),
           Padding(

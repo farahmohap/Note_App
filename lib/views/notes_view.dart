@@ -14,12 +14,12 @@ class NotesView extends StatelessWidget {
             shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(16)),
               context: context,
               builder: ((context) {
-                return AddNoteBottomSheet();
+                return  AddNoteBottomSheet();
               }));
         },
-        child: Icon(Icons.add),
+        child:const Icon(Icons.add),
       ),
-      body: NotesViewBody(),
+      body:const NotesViewBody(),
     );
   }
 }

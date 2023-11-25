@@ -6,13 +6,13 @@ part 'note_model.g.dart'; //لازم الاسم يكون زي اسم الفاي�
 @HiveType(typeId: 0) //each obj must have uniqe id 0:255
 class NoteModel extends HiveObject {
   @HiveField(0) //uniqe for each class
-  final String title;
+   String title;
   @HiveField(1)
-  late final String subTitle;
+    String subTitle;
   @HiveField(2)
-  late final String date;
+   final String date;
   @HiveField(3)
-  late final int color;
+    int color;
 
   NoteModel(
       {required this.title,
